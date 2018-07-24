@@ -45,7 +45,7 @@ class Table extends Component {
               <span onClick={() => this.sortDecrementBy('name')}>&darr;</span>
             </th>
             <th>
-              Adress<span onClick={() => this.sortIncrementBy('address')}>
+              Address<span onClick={() => this.sortIncrementBy('address')}>
                 &uarr;
               </span>
               <span onClick={() => this.sortDecrementBy('address')}>
