@@ -36,7 +36,7 @@ class Table extends Component {
   render() {
     return (
       <table id="people-data">
-        <tbody>
+        <thead>
           <tr>
             <th>
               Name<span onClick={() => this.sortIncrementBy('name')}>
@@ -81,6 +81,8 @@ class Table extends Component {
               </span>
             </th>
           </tr>
+        </thead>
+        <tbody>
           <TableRows data={this.state.data} />
         </tbody>
       </table>
