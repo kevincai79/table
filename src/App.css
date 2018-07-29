@@ -2,11 +2,33 @@
   text-align: center;
 }
 
+table thead tr {
+  display: block;
+}
+
+table th,
+table td {
+  width: 170px;
+}
+
+table tbody {
+  display: block;
+  height: 600px;
+  overflow: auto;
+}
+
 table,
 th,
 td {
-  border: 1px solid #ddd;
   border-collapse: collapse;
+}
+
+th {
+  border: 1px solid #ddd;
+}
+
+td {
+  border: 1px solid #ddd;
 }
 
 table {
