@@ -3,6 +3,10 @@ import React, { Component } from 'react';
 import data from './data.json';
 import TableRows from './table_rows';
 
+for (let i = 0; i < data.length; i++) {
+  data[i].position = i;
+}
+
 class Table extends Component {
   constructor(props) {
     super(props);
@@ -16,19 +20,25 @@ class Table extends Component {
   }
 
   sortIncrementBy(term) {
+    // for (let i = 0; i < this.state.data.length; i++) {
+    //   this.state.data[i].position = i;
+    // }
     const sortedData = this.state.data.sort((a, b) => {
       if (a[term] < b[term]) return -1;
       if (a[term] > b[term]) return 1;
-      return 0;
+      return a.position - b.position;
     });
     this.setState({ data: sortedData });
   }
 
   sortDecrementBy(term) {
+    // for (let i = 0; i < this.state.data.length; i++) {
+    //   this.state.data[i].position = i;
+    // }
     const sortedData = this.state.data.sort((a, b) => {
       if (a[term] < b[term]) return 1;
       if (a[term] > b[term]) return -1;
-      return 0;
+      return a.position - b.position;
     });
     this.setState({ data: sortedData });
   }
